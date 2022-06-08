@@ -53,15 +53,15 @@ function changeAiChoiceDisplay(choice){
     switch (choice) {
         case SCISSORS:
             element = document.getElementsByClassName("ai-scissors");
-            element.src = "../images/scissors.jpg";
+            element[0].src = "images/scissors.jpg";
             break;
         case ROCK:
             element = document.getElementsByClassName("ai-rock");
-            element.src = "../images/rock.jpg";
+            element[0].src = "images/rock.jpg";
             break;
         case PAPER:
             element = document.getElementsByClassName("ai-paper");
-            element.src = "../images/paper.jpg";
+            element[0].src = "images/paper.jpg";
             break
         default:
             break;
