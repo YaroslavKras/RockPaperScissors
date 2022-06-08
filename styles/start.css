@@ -1,0 +1,51 @@
+
+.container {
+    position: relative;
+    width: 50%;
+}
+
+.container img {
+    width: 100%;
+    height: auto;
+}
+
+.container .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.container .btn:hover {
+    background-color: black;
+}
+
+.table{
+    display: flex;
+    flex-direction: row;
+    background: burlywood;
+}
+
+.playerChoices{
+    display: flex;
+    flex-direction: column;
+    padding-right: 10%;
+}
+
+.results .gameMessage{
+    display: flex;
+    padding: 10%;
+}
+.aiChoices{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+}
