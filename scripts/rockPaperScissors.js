@@ -52,16 +52,22 @@ function changeAiChoiceDisplay(choice){
     let element;
     switch (choice) {
         case SCISSORS:
-            element = document.getElementsByClassName("ai-scissors");
-            element[0].src = "images/scissors.jpg";
+            element = document.getElementById("ai-scissors");
+            element.src = "../images/scissors.jpg";
+            document.getElementById("ai-rock").src = "/images/empty.png";
+            document.getElementById("ai-paper").src = "/images/empty.png";
             break;
         case ROCK:
-            element = document.getElementsByClassName("ai-rock");
-            element[0].src = "images/rock.jpg";
+            element = document.getElementById("ai-rock");
+            element.src = "../images/rock.jpg";
+            document.getElementById("ai-scissors").src = "/images/empty.png";
+            document.getElementById("ai-paper").src = "/images/empty.png";
             break;
         case PAPER:
-            element = document.getElementsByClassName("ai-paper");
-            element[0].src = "images/paper.jpg";
+            element = document.getElementById("ai-paper");
+            element.src = "../images/paper.jpg";
+            document.getElementById("ai-rock").src = "/images/empty.png";
+            document.getElementById("ai-scissors").src = "/images/empty.png";
             break
         default:
             break;
@@ -73,7 +79,7 @@ function calculateResult(aiChoice, userChoice){
         return "You won! " + userChoice + " beats " + aiChoice + "! ";
     } else if (aiChoice === getOptionToLoseTo(userChoice.toUpperCase())) {
         playerChoice = null;
-        return "Lo-ho-hoo-ser! "  + aiChoice + " beats " + userChoice + "! "
+        return "You lost! "  + aiChoice + " beats " + userChoice + "! "
     } else {
         playerChoice = null;
         return "Draw. How exciting."
