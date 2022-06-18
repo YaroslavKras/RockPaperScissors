@@ -10,6 +10,7 @@ function play(playerChoice) {
     }while (computerChoice === "undefined");
     changeAiChoiceDisplay(computerChoice);
     console.log(computerChoice);
+    console.log("FFFUUU");
     document.getElementById("message").innerHTML = calculateResult(computerChoice, playerChoice);
     document.getElementById("newGameButton").style.display = "inline";
 }
