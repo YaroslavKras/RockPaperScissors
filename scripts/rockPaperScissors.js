@@ -53,21 +53,21 @@ function changeAiChoiceDisplay(choice){
     switch (choice) {
         case SCISSORS:
             element = document.getElementById("ai-scissors");
-            element.src = "../images/scissors.jpg";
-            document.getElementById("ai-rock").src = "../images/empty.png";
-            document.getElementById("ai-paper").src = "../images/empty.png";
+            element.src = "./images/scissors.jpg";
+            document.getElementById("ai-rock").src = "./images/empty.png";
+            document.getElementById("ai-paper").src = "./images/empty.png";
             break;
         case ROCK:
             element = document.getElementById("ai-rock");
-            element.src = "../images/rock.jpg";
-            document.getElementById("ai-scissors").src = "../images/empty.png";
-            document.getElementById("ai-paper").src = "../images/empty.png";
+            element.src = "./images/rock.jpg";
+            document.getElementById("ai-scissors").src = "./images/empty.png";
+            document.getElementById("ai-paper").src = "./images/empty.png";
             break;
         case PAPER:
             element = document.getElementById("ai-paper");
-            element.src = "../images/paper.jpg";
-            document.getElementById("ai-rock").src = "../images/empty.png";
-            document.getElementById("ai-scissors").src = "../images/empty.png";
+            element.src = "./images/paper.jpg";
+            document.getElementById("ai-rock").src = "./images/empty.png";
+            document.getElementById("ai-scissors").src = "./images/empty.png";
             break
         default:
             break;
