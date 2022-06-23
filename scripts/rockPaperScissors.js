@@ -12,7 +12,7 @@ function play(playerChoice) {
     console.log(computerChoice);
     console.log("FFFUUU");
     document.getElementById("message").innerHTML = calculateResult(computerChoice, playerChoice);
-    document.getElementById("newGameButton").style.display = "inline";
+    document.getElementById("newGameButton").style.display = "block";
 }
 
 function getRandomNumberFromTo(min, max){

@@ -1,20 +1,30 @@
-
+html{
+    background: burlywood;
+}
 .container {
     position: relative;
     width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.container img {
+
+img {
+    display: grid;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: auto;
 }
 
-.container .btn {
+.btn{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+    /*ms-transform: translate(-50%, -50%);*/
     background-color: darkgrey;
     color: white;
     font-size: 16px;
@@ -25,28 +35,35 @@
     text-decoration: none;
 }
 
-.container .btn:hover {
+btn:hover {
     background-color: black;
 }
+.newgamebtn{
+    margin:0 auto;
+    display:block;
+    text-align:center;
+}
 
+.newgamebtn:hover{
+    background-color: sandybrown;
+}
 .table{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, 220px);
+    margin: fill auto;
     background: burlywood;
+    gap: 10px;
+    justify-content: center;
 }
 
 .playerChoices{
-    display: flex;
-    flex-direction: column;
-    padding-right: 10%;
+    padding-bottom: 10px;
 }
 
 .results .gameMessage{
-    display: flex;
+    display: grid;
     padding: 10%;
 }
 .aiChoices{
-    display: flex;
-    flex-direction: column;
-    padding-left: 10%;
+    padding-bottom: 10px;
 }
