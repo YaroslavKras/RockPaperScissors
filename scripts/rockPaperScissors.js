@@ -10,7 +10,6 @@ function play(playerChoice) {
     }while (computerChoice === "undefined");
     changeAiChoiceDisplay(computerChoice);
     console.log(computerChoice);
-    console.log("FFFUUU");
     document.getElementById("message").innerHTML = calculateResult(computerChoice, playerChoice);
     document.getElementById("newGameButton").style.display = "block";
 }
@@ -50,25 +49,31 @@ function getOptionToLoseTo(choice){
 }
 
 function changeAiChoiceDisplay(choice){
-    let element;
+    let element = document.getElementById("ai-paper");
+    element.style.transitionDuration = "0.5s";
+    element.style.transform = "rotatey(180deg)";
+
+    let placeholderOne = document.getElementById("ai-rock");
+    placeholderOne.style.transform = "rotatey(180deg)";
+    placeholderOne.style.transitionDuration = "0.5s";
+
+
+    placeholderOne.src = "/images/empty.png";
+    let placeholderTwo = document.getElementById("ai-scissors");
+    placeholderTwo.style.transitionDuration = "0.5s";
+    placeholderTwo.style.transform = "rotatey(180deg)";
+
+    placeholderTwo.src = "/images/empty.png";
     switch (choice) {
         case SCISSORS:
-            element = document.getElementById("ai-scissors");
             element.src = "/images/scissors.jpg";
-            document.getElementById("ai-rock").src = "/images/empty.png";
-            document.getElementById("ai-paper").src = "/images/empty.png";
             break;
         case ROCK:
-            element = document.getElementById("ai-rock");
             element.src = "/images/rock.jpg";
-            document.getElementById("ai-scissors").src = "/images/empty.png";
-            document.getElementById("ai-paper").src = "/images/empty.png";
             break;
         case PAPER:
-            element = document.getElementById("ai-paper");
             element.src = "/images/paper.jpg";
-            document.getElementById("ai-rock").src = "/images/empty.png";
-            document.getElementById("ai-scissors").src = "/images/empty.png";
+
             break
         default:
             break;
