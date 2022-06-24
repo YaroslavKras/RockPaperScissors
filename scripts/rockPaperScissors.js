@@ -58,21 +58,21 @@ function changeAiChoiceDisplay(choice){
     placeholderOne.style.transitionDuration = "0.5s";
 
 
-    placeholderOne.src = "/images/empty.png";
+    placeholderOne.src = "./images/empty.png";
     let placeholderTwo = document.getElementById("ai-scissors");
     placeholderTwo.style.transitionDuration = "0.5s";
     placeholderTwo.style.transform = "rotatey(180deg)";
 
-    placeholderTwo.src = "/images/empty.png";
+    placeholderTwo.src = "./images/empty.png";
     switch (choice) {
         case SCISSORS:
-            element.src = "/images/scissors.jpg";
+            element.src = "./images/scissors.jpg";
             break;
         case ROCK:
-            element.src = "/images/rock.jpg";
+            element.src = "./images/rock.jpg";
             break;
         case PAPER:
-            element.src = "/images/paper.jpg";
+            element.src = "./images/paper.jpg";
 
             break
         default:
