@@ -5,11 +5,18 @@ const OPTIONS = [SCISSORS, ROCK, PAPER];
 let computerChoice, playerChoice;
 
 function play(playerChoice) {
+
     do {
         computerChoice = getRandomOption();
     }while (computerChoice === "undefined");
     changeAiChoiceDisplay(computerChoice);
     console.log(computerChoice);
+    let rockElement = document.getElementById('rock');
+    rockElement.onclick = null;
+    let paperElement = document.getElementById('paper');
+    paperElement.onclick = null;
+    let scissorsElement = document.getElementById('scissors');
+    scissorsElement.onclick = null;
     document.getElementById("message").innerHTML = calculateResult(computerChoice, playerChoice);
     document.getElementById("newGameButton").style.display = "block";
 }
