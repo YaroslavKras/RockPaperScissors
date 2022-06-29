@@ -63,6 +63,7 @@ btn:hover {
 .results .gameMessage{
     display: grid;
     padding: 10%;
+    text-align: center;
 }
 .aiChoices{
     padding-bottom: 10px;
